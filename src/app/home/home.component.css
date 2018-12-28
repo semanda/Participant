@@ -1,6 +1,6 @@
 .container{
     display: grid;
-    grid-template-columns: 50% auto;
+    grid-template-columns: 35% auto;
 }
 .col{
     padding: .4em 1.3em;
@@ -28,7 +28,7 @@
 }
 .cv-container{
     background: #3FA0E1;
-    padding: .5em;
+    padding: .9em;
     font-weight: bold;
     cursor: pointer;
 }

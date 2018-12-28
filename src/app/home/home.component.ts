@@ -34,7 +34,7 @@ import {DataService} from '../data.service';
 })
 export class HomeComponent implements OnInit {
   itemCounter:number;
-  btnText:string="Add Item";
+  btnText:string="Submit";
   professionTxt:string;
   jobs=[];
 

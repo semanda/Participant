@@ -1,22 +1,42 @@
 <div class="container color-dark">
   <div class="col">
-    <p>Add your  Job list item</p>
+    <p>Add Topic of Discussion item</p>
   </div>
   <div class="col">
-    <p>Your  Job Collection list ({{itemCounter}})</p>
+    <p> Discussion Collection list ({{itemCounter}})</p>
   </div>
 </div>
 <div class="container color-light" [@jobs]="jobs.length">
   <div class="col">
-    <p class="sm">Use the form below to track your career Position. What Jobs have you participated?</p>
+    <h3>
+      <p class="sm">GET STARTED !!</p>
+    </h3>
     <form>
-      <input type="text" class="txt" name="item" placeholder="Format: Year - Position - Company" [(ngModel)]="professionTxt" required="required">
-        <input type="submit" class="btn" [value]="btnText" (click)="addItem()">
+      <label>Names:</label>
+      <br>
+      <input type="text" class="txt" name="name" placeholder="Enter Your Names" required="required">
+
+      <label>Topic of Choice:</label>
+      <br>
+      <input type="text" class="txt" name="qualification" placeholder="Enter Your topic"  [(ngModel)]="professionTxt"  required="required">
+
+      <label>Venue:</label>
+      <br>
+      <input type="text" class="txt" name="item" placeholder="eg B001"  required="required">
+      <br>
+      <label>Date:</label>
+      <br>
+      <input type="text" class="txt" name="date" placeholder="Select date" required="required">
+      <br>
+      <label>Contact:</label>
+      <p></p>
+      <input type="text" class="txt" name="Tel" placeholder="Enter Your Tel Number" required="required">
+      <input type="submit" class="btn" [value]="btnText" (click)="addItem()">
     </form>
   </div>
   <div class="col">
-    <p class="cv-container" *ngFor="let job of jobs; let i=index"  (click)="removeItem(i)" >
-     {{job}}
+    <p class="cv-container" *ngFor="let job of jobs; let i=index" (click)="removeItem(i)">
+      {{job}}
     </p>
   </div>
 </div>
